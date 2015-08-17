@@ -1,0 +1,4 @@
+.idea
+client/environment.js
+dist
+node_modules
