@@ -1,4 +1,4 @@
-export default x = {
+export default {
     PATH: {
         API: 'http://localhost'
     }
