@@ -10,6 +10,7 @@ ES Boilerplate uses the following :
 
 ```sh
 npm install
+cp client/environment.sample.js client/environment.js
 gulp
 ```
 
