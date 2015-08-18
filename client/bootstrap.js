@@ -1,4 +1,4 @@
-import './environment.js';
-import './configuration';
-
+import configuration from './configuration';
 import modules from './module/registry';
+
+modules.forEach(Module => new Module());

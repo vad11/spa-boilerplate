@@ -31,7 +31,7 @@ module.exports = {
     ],
 
     resolve: {
-        root: path.resolve('./')
+        root: path.resolve('./client/')
     },
 
     devServer: {

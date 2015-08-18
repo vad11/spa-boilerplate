@@ -13,9 +13,9 @@ Created to be as agnostic as possible. The project **does not** contain any JS f
 ### Setup
 
 ```sh
-git clone git@github.com:manuelvulp/spa-boilerplate.git
+git clone https://github.com/manuelvulp/spa-boilerplate.git
 cd spa-boilerplate
-rm .git
+rm -rf .git
 npm install
 cp client/environment.sample.js client/environment.js
 gulp
