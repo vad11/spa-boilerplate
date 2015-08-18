@@ -1,8 +1,8 @@
-![ES Boilerplate logo](https://raw.githubusercontent.com/manuelvulp/es-boilerplate/master/client/assets/images/es-boilerplate.jpg)
+![SPA Boilerplate logo](https://raw.githubusercontent.com/manuelvulp/spa-boilerplate/master/client/assets/images/spa-bp.jpg)
 
 ### Tech
 
-ES Boilerplate uses the following :
+Single-Page Application (SPA) Boilerplate uses the following :
 * [Webpack] - Transpiles all the JS from ES2015/2016 to ES5
 * [Gulp] - Taskrunner
 
