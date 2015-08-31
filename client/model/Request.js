@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 export default class Request {
     constructor() {
         this.model = {
@@ -13,7 +15,7 @@ export default class Request {
     }
 
     setMethod(method) {
-        this.method = method;
+        this.model.method = method;
     }
 
     setUrl(url) {
@@ -22,5 +24,22 @@ export default class Request {
 
     setHeader(header, value) {
         this.model.header[header] = value;
+    }
+
+    setData(data) {
+        this.model.data = data;
+    }
+
+    setOptions(options) {
+        this.options = options;
+    }
+
+    execute(data) {
+        return $.ajax({
+            url: this.model.url,
+            headers: this.model.header,
+            type: this.model.method,
+            data: data || this.model.data
+        });
     }
 }

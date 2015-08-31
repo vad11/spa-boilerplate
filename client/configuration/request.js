@@ -3,20 +3,24 @@ import Request from '../model/Request';
 import RequestStore from '../store/RequestStore';
 import TokenService from '../service/TokenService';
 import requests from 'json!../request/example.json';
-import environment from '../environment';
+import environment from 'json!../environment.json';
 
-requests.forEach(addToRequestStore);
-
-function addToRequestStore(r) {
+requests.forEach(r => {
     var request = new Request();
 
     let url = new Url();
-    url.addFragment(environment.getApiPath());
+
+    if (r.url.indexOf('http') < 0) {
+        url.addFragment(environment.PATHS.API);
+    }
+
     url.addFragment(r.url);
 
     request.setMethod(r.method);
     request.setUrl(url.format());
-    request.setHeader('x-authorization', TokenService.getToken());
+
+    // Add JSON Web Token to all requests
+    //request.setHeader('x-authorization', TokenService.getToken());
 
     RequestStore.set(r.id, request);
-}
+});

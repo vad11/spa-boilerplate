@@ -1,0 +1,5 @@
+{
+    "PATHS": {
+        "API": "http://api.example.com/v1"
+    }
+}

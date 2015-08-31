@@ -1,5 +1,21 @@
 var webpack = require('webpack');
 var path = require('path');
+var argv = require('yargs').argv;
+
+var plugins = [
+    new webpack.ProvidePlugin({
+        _: 'lodash',
+        $: 'jquery'
+    })
+];
+
+//if (argv.production) {
+//    plugins.push(new webpack.optimize.UglifyJsPlugin({
+//        compress: {
+//            warnings: false
+//        }
+//    }));
+//}
 
 module.exports = {
     entry: './client/bootstrap',
@@ -23,12 +39,7 @@ module.exports = {
         ]
     },
 
-    plugins: [
-        new webpack.ProvidePlugin({
-            _: 'lodash',
-            $: 'jquery'
-        })
-    ],
+    plugins: plugins,
 
     resolve: {
         root: path.resolve('./client/')

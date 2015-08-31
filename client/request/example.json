@@ -1,22 +1,7 @@
 [
 	{
-		"id": "getProfile",
-		"url": "profile",
-		"method": "GET"
-	},
-	{
-		"id": "updateProfile",
-		"url": "profile",
-		"method": "PUT"
-	},
-	{
-		"id": "getProfileSettings",
-		"url": "profile/settings",
-		"method": "GET"
-	},
-	{
-		"id": "getProfileSetting",
-		"url": "profile/settings/:id",
+		"id": "getRepo",
+		"url": "https://api.github.com/repos/manuelvulp/spa-boilerplate",
 		"method": "GET"
 	}
 ]

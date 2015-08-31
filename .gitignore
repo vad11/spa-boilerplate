@@ -1,4 +1,4 @@
 .idea
-client/environment.js
+client/environment.json
 dist
 node_modules
