@@ -24,11 +24,13 @@ module.exports = {
             {
                 test: /\.(html|hbs)$/,
                 loader: 'html'
-            }
+            },
+            {
+                test: /\.css$/,
+                loader: "style!css"
+            },
         ]
     },
-
-    inline: true,
 
     plugins: [
         new webpack.ProvidePlugin({
@@ -42,6 +44,7 @@ module.exports = {
     },
 
     devServer: {
+        inline: true,
         filename: 'build.js',
         contentBase: 'build',
         quiet: false,

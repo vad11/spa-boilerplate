@@ -19,6 +19,6 @@ cp client/environment.sample.js client/environment.js
 npm run development
 ```
 
-Default port is **8080** which can be changed in **package.json scripts** to desirable one. After running **npm run development** task, open your browser @ [http://localhost:8080/webpack-dev-server/]
+Default port is **8080** which can be changed in **package.json scripts** to desirable one. After running **npm run development** task, open your browser @ [http://localhost:8080]
 
-[http://localhost:8080/webpack-dev-server/]: http://localhost:8080/webpack-dev-server/
+[http://localhost:8080/]: http://localhost:8080

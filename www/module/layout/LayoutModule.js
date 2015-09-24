@@ -1,6 +1,5 @@
 import template from './layout.html';
-import 'style!css!./layout.css';
-import svg from './icomoon/icomoon.svg';
+import './layout.css';
 
 export default class LayoutModule {
     constructor() {
