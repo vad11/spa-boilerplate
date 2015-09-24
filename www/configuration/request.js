@@ -2,8 +2,8 @@ import Url from '../model/Url';
 import Request from '../model/Request';
 import RequestStore from '../store/RequestStore';
 import TokenService from '../service/TokenService';
-import requests from 'json!../request/example.json';
-import environment from 'json!../environment.json';
+import requests from '../request/example.json';
+import environment from '../environment.json';
 
 requests.forEach(r => {
     var request = new Request();

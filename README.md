@@ -2,9 +2,7 @@
 
 ### Tech
 
-Single-Page Application (SPA) Boilerplate uses the following :
-* [Webpack] - Transpiles all the JS from ES2015/2016 to ES5
-* [Gulp] - Taskrunner
+Single-Page Application (SPA) Boilerplate that uses Webpack and npm scripts for building the application.
 
 ### Way of thinking
 
@@ -18,9 +16,9 @@ cd spa-boilerplate
 rm -rf .git
 npm install
 cp client/environment.sample.js client/environment.js
-gulp
+npm run development
 ```
 
-Default port is **8080** which can be changed in **gulp/webpack.js** to desirable one. After running **gulp default** task, open your browser @ [http://localhost:8080/webpack-dev-server/]
+Default port is **8080** which can be changed in **package.json scripts** to desirable one. After running **npm run development** task, open your browser @ [http://localhost:8080/webpack-dev-server/]
 
 [http://localhost:8080/webpack-dev-server/]: http://localhost:8080/webpack-dev-server/
