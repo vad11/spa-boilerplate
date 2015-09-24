@@ -1,27 +1,11 @@
 var webpack = require('webpack');
 var path = require('path');
-var argv = require('yargs').argv;
-
-var plugins = [
-    new webpack.ProvidePlugin({
-        _: 'lodash',
-        $: 'jquery'
-    })
-];
-
-//if (argv.production) {
-//    plugins.push(new webpack.optimize.UglifyJsPlugin({
-//        compress: {
-//            warnings: false
-//        }
-//    }));
-//}
 
 module.exports = {
-    entry: './client/bootstrap',
+    entry: './www/index',
 
     output: {
-        path: __dirname + '/dist',
+        path: __dirname + '/build',
         filename: 'build.js'
     },
 
@@ -33,25 +17,43 @@ module.exports = {
                 loader: 'babel?stage=0'
             },
             {
+                test: /\.json?$/,
+                exclude: /(node_modules)/,
+                loader: 'json'
+            },
+            {
                 test: /\.(html|hbs)$/,
-                loader: 'html-loader'
+                loader: 'html'
             }
         ]
     },
 
-    plugins: plugins,
+    inline: true,
+
+    plugins: [
+        new webpack.ProvidePlugin({
+            _: 'lodash',
+            $: 'jquery'
+        })
+    ],
 
     resolve: {
-        root: path.resolve('./client/')
+        root: path.resolve('./www/')
     },
 
     devServer: {
-        contentBase: 'dist',
-        quiet: false,
         filename: 'build.js',
-        //publicPath: '/assets/',
+        contentBase: 'build',
+        quiet: false,
+        noInfo: false,
         stats: {
-            colors: true
+            assets: false,
+            colors: true,
+            version: false,
+            hash: false,
+            timings: true,
+            chunks: false,
+            chunkModules: false
         }
     }
 };

@@ -1,6 +1,6 @@
 import configuration from './configuration/registry';
 import modules from './module/registry';
-import Store from './store/registry';
+import RequestStore from './store/RequestStore';
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +13,8 @@ import Store from './store/registry';
 */
 
 function bootstrap() {
-    Store.Request.get('getRepo').execute().then(initialize);
+    //RequestStore.get('getRepo').execute().then(initialize);
+    initialize();
 }
 
 /*

@@ -4,23 +4,33 @@
   "description": "",
   "main": "client/bootstrap.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack",
+    "webpack-dev-server": "webpack-dev-server",
+    "build:create:folder": "mkdirp build",
+    "build": "npm-run-all --sequential build:create:folder --parallel webpack index",
+    "index": "cp www/index.html build/index.html",
+    "index:watch": "nodemon -e html -w www -x \"npm run index\"",
+    "development": "npm-run-all --parallel build:create:folder index:watch webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "animate.css": "^3.4.0",
-    "babel-core": "^5.8.19",
-    "babel-loader": "^5.3.2",
-    "gulp": "^3.9.0",
-    "gulp-stylus": "^2.0.5",
-    "html-loader": "^0.3.0",
+    "css-loader": "^0.17.0",
     "jquery": "^2.1.4",
     "json-loader": "^0.5.2",
     "jsonwebtoken": "^5.0.4",
-    "lodash": "^3.10.0",
-    "webpack": "^1.10.5",
-    "webpack-dev-server": "^1.10.1",
-    "yargs": "^3.23.0"
+    "lodash": "^3.10.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^5.3.2",
+    "html-loader": "^0.3.0",
+    "json-loader": "^0.5.3",
+    "mkdirp": "^0.5.1",
+    "nodemon": "^1.5.1",
+    "npm-run-all": "^1.2.11",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.11.0"
   }
 }
