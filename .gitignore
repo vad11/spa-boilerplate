@@ -1,3 +1,3 @@
 .idea
-client/environment.json
+www/environment.json
 node_modules
