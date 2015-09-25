@@ -21,4 +21,30 @@ npm run development
 
 Default port is **8080** which can be changed in **package.json scripts** to desirable one. After running **npm run development** task, open your browser @ [http://localhost:8080]
 
+### Application execution (in *www* directory)
+
+1. The entry point of the application is index.js
+??? index.js
+
+2. Configure your application by importing **www/configuration/registry.js** which imports all sub configuration files from the configuration folder. Eg setup API paths, initialize services, configure logging etc for given environment.
+??? index.js
+     ???  configuration
+          ??? registry.js **imports all configuration files from this folder**
+          
+
+3. Bootstrap your application with data that is essential for your application to run. Eg translations, logged user.
+```javascript
+function bootstrap() {
+    // do some logic here, then initialize
+    initialize();
+}
+```
+
+
 [http://localhost:8080]: http://localhost:8080
+???? index.js
+?   ??? folder
+?   ??? structure
+?   ?   ??? for
+?   ?   ??? your
+?   ??? application

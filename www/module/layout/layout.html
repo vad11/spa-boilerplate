@@ -1,16 +1,22 @@
-<div class="x-icomoon" style="display: none"></div>
+<div class="js-icomoon" style="display: none"></div>
 
 <div class="animated fadeInLeft module-sidebar">
-    <a href="https://github.com/manuelvulp/spa-boilerplate" target="_blank">
-        <div class="item">
+    <div class="item js-spinner">
+        <svg class="icon animation-spin">
+            <use xlink:href="#icon-spinner2"></use>
+        </svg>
+    </div>
+
+    <a class="js-repository" href="#" target="_blank">
+        <div class="item animated link" style="display: none">
             <svg class="icon">
                 <use xlink:href="#icon-github3"></use>
             </svg>
         </div>
     </a>
 
-    <a href="https://github.com/manuelvulp/spa-boilerplate/issues" target="_blank">
-        <div class="item">
+    <a class="js-issues" href="#">
+        <div class="item animated link" style="display: none">
             <svg class="icon">
                 <use xlink:href="#icon-bug"></use>
             </svg>
@@ -18,6 +24,4 @@
     </a>
 </div>
 
-<div class="js-content">
-
-</div>
+<div class="content animated"></div>

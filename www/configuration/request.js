@@ -10,7 +10,7 @@ requests.forEach(r => {
 
     let url = new Url();
 
-    if (r.url.indexOf('http') < 0) {
+    if (r.url.indexOf('http') < 0 && r.url[0] !== '/') {
         url.addFragment(environment.PATHS.API);
     }
 
@@ -22,5 +22,5 @@ requests.forEach(r => {
     // Add JSON Web Token to all requests
     //request.setHeader('x-authorization', TokenService.getToken());
 
-    RequestStore.set(r.id, request);
+    RequestStore[r.id] = request;
 });

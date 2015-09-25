@@ -1,6 +1,7 @@
 import configuration from './configuration/registry';
 import modules from './module/registry';
 import RequestStore from './store/RequestStore';
+import LayoutModule from './module/layout/LayoutModule';
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +14,10 @@ import RequestStore from './store/RequestStore';
 */
 
 function bootstrap() {
-    //RequestStore.get('getRepo').execute().then(initialize);
-    initialize();
+    var layoutModule = new LayoutModule();
+    setTimeout(() => {
+        RequestStore.getRepo.execute().then(repository => initialize(layoutModule, repository));
+    }, 500);
 }
 
 /*
@@ -23,12 +26,14 @@ function bootstrap() {
 |--------------------------------------------------------------------------
 |
 | Use data from bootstrap to initialize the application. All application
-| initialization code in the following block.
+| initialization code should go in this block.
 |
 */
 
-function initialize() {
-    _.forEach(modules, Module => new Module());
+function initialize(layout, repository) {
+    console.log(repository);
+    console.info('[initialize()] Application up and running');
+    layout.setRepository(repository);
 }
 
 /*
