@@ -1,11 +1,11 @@
 [
 	{
-		"id": "getRepoFromGithub",
+		"id": "getRepositoryFromGithub",
 		"url": "https://api.github.com/repos/manuelvulp/spa-boilerplate",
 		"method": "GET"
 	},
 	{
-		"id": "getRepo",
+		"id": "getRepository",
 		"url": "/assets/repository.json",
 		"method": "GET"
 	}

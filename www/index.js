@@ -16,7 +16,7 @@ import LayoutModule from './module/layout/LayoutModule';
 function bootstrap() {
     var layoutModule = new LayoutModule();
     setTimeout(() => {
-        RequestStore.getRepo.execute().then(repository => initialize(layoutModule, repository));
+        RequestStore.getRepository.execute().then(repository => initialize(layoutModule, repository));
     }, 500);
 }
 
