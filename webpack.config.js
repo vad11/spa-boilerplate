@@ -49,6 +49,7 @@ module.exports = {
         contentBase: 'build',
         quiet: false,
         noInfo: false,
+        host: '0.0.0.0',
         stats: {
             assets: false,
             colors: true,
