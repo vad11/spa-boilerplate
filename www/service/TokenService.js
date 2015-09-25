@@ -1,4 +1,4 @@
-import jwt from 'jsonwebtoken';
+import decodeJwt from 'jwt-decode';
 
 export default new class TokenService {
     constructor() {
@@ -25,6 +25,6 @@ export default new class TokenService {
     }
 
     decode() {
-        return jwt.decode(this.getToken());
+        return decodeJwt(this.getToken());
     }
 }

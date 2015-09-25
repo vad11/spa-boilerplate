@@ -1,4 +1,4 @@
-![SPA Boilerplate logo](https://raw.githubusercontent.com/manuelvulp/spa-boilerplate/master/client/assets/images/spa-bp.jpg)
+![SPA Boilerplate logo](https://raw.githubusercontent.com/manuelvulp/spa-boilerplate/master/www/assets/images/spa-bp.jpg)
 
 ### Tech
 
@@ -15,7 +15,7 @@ git clone https://github.com/manuelvulp/spa-boilerplate.git
 cd spa-boilerplate
 rm -rf .git
 npm install
-cp client/environment.sample.js client/environment.js
+cp www/environment.sample.js www/environment.js
 npm run development
 ```
 

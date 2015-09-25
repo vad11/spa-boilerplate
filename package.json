@@ -16,11 +16,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "animate.css": "^3.4.0",
     "css-loader": "^0.17.0",
     "jquery": "^2.1.4",
     "json-loader": "^0.5.2",
-    "jsonwebtoken": "^5.0.4",
+    "jwt-decode": "^1.4.0",
     "lodash": "^3.10.0"
   },
   "devDependencies": {

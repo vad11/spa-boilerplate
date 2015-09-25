@@ -1,9 +1,10 @@
 import template from './layout.html';
+import icomoon from './icomoon.html';
 import './layout.css';
 
 export default class LayoutModule {
     constructor() {
-        $('.x-icomoon').html();
         $('.js-container').html(template);
+        $('.x-icomoon').html(icomoon);
     }
 }

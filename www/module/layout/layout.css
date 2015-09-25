@@ -1,3 +1,19 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+}
+
+.animated {
+    animation-duration: 0.2s;
+}
+
+.icon {
+    fill: #eee;
+    height: 24px;
+    transition: fill .2s;
+    width: 24px;
+}
+
 .module-sidebar {
     background: #333;
     color: #eee;
@@ -5,4 +21,18 @@
     position: fixed;
     transform: translate3d(0, 0, 0);
     width: 100px;
+}
+
+.module-sidebar .item {
+    padding: 30px;
+    text-align: center;
+    transition: background .2s;
+}
+
+.module-sidebar .item:hover {
+    background: #fff;
+}
+
+.module-sidebar .item:hover .icon {
+    fill: #333;
 }

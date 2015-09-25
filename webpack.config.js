@@ -12,7 +12,7 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.js?$/,
+                test: /\.(js|jsx)$/,
                 exclude: /(node_modules)/,
                 loader: 'babel?stage=0'
             },
@@ -23,12 +23,14 @@ module.exports = {
             },
             {
                 test: /\.(html|hbs)$/,
+                exclude: /(node_modules)/,
                 loader: 'html'
             },
             {
                 test: /\.css$/,
+                exclude: /(node_modules)/,
                 loader: "style!css"
-            },
+            }
         ]
     },
 
