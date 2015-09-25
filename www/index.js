@@ -31,7 +31,6 @@ function bootstrap() {
 */
 
 function initialize(layout, repository) {
-    console.log(repository);
     console.info('[initialize()] Application up and running');
     layout.setRepository(repository);
 }
